@@ -24,7 +24,7 @@ public class AccountServiceImp implements AccountService{
         Account account = new Account(createAccountRequestDTO.getOwnerName(), createAccountRequestDTO.getEmail(), createAccountRequestDTO.getBalance());
         account = accountRepository.save(account);
         return CreateAccountResponseDTO.builder()
-                .id(account.getAccountId())
+                .id(account.getId())
                 .ownerName(account.getOwnerName())
                 .email(account.getEmail())
                 .balance(account.getBalance())
@@ -36,7 +36,7 @@ public class AccountServiceImp implements AccountService{
         Account account = accountRepository.findById(accountId)
                 .orElseThrow(() -> new AccountNotFoundException(accountId));
         return CreateAccountResponseDTO.builder()
-                .id(account.getAccountId())
+                .id(account.getId())
                 .ownerName(account.getOwnerName())
                 .email(account.getEmail())
                 .balance(account.getBalance())

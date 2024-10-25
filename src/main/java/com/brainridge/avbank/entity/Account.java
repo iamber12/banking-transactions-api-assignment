@@ -14,9 +14,9 @@ import java.time.LocalDateTime;
 public class Account {
 
     @Id
-    @SequenceGenerator(name="account_uuid_sequence", sequenceName = "account_uuid_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "account_uuid_sequence")
-    private Long accountId;
+    @SequenceGenerator(name="account_id_sequence", sequenceName = "account_id_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "account_id_sequence")
+    private Long id;
 
     @Column(name="ownerName", nullable = false)
     private String ownerName;
@@ -28,14 +28,12 @@ public class Account {
     private BigDecimal balance;
 
     @Column(name = "createdAt", nullable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
-
-    @Column(name = "lastUpdateAt", nullable = false)
-    private LocalDateTime lastUpdatedAt = LocalDateTime.now();
+    private LocalDateTime createdAt;
 
     public Account(String ownerName, String email, BigDecimal balance) {
         this.ownerName = ownerName;
         this.email = email;
         this.balance = balance;
+        this.createdAt = LocalDateTime.now();
     }
 }

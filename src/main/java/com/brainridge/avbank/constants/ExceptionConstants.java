@@ -6,4 +6,6 @@ public class ExceptionConstants {
     public static final String ERROR_TYPE_MISMATCH = "Type Mismatch Error";
     public static final String ERROR_ACCOUNT_ALREADY_EXISTS = "Account Already Exists Error";
     public static final String ERROR_INVALID_REQUEST_JSON = "Invalid JSON format in request.";
+    public static final String ERROR_TRANSACTION_FAILED = "Transaction failed.";
+    public static final String UNEXPECTED_ERROR = "Unexpected error.";
 }

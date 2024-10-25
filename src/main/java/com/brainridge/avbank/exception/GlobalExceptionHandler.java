@@ -87,7 +87,17 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Object> handleGeneralException(Exception ex, WebRequest request) {
         return buildErrorResponseBody(
                 HttpStatus.BAD_REQUEST,
+                ExceptionConstants.UNEXPECTED_ERROR,
                 ex.getMessage(),
+                request
+        );
+    }
+
+    @ExceptionHandler({SelfTransactionNotAllowedException.class, InsufficientSenderBalanceException.class})
+    public ResponseEntity<Object> handleSelfTransactionNotAllowedException(Exception ex, WebRequest request) {
+        return buildErrorResponseBody(
+                HttpStatus.BAD_REQUEST,
+                ExceptionConstants.ERROR_TRANSACTION_FAILED,
                 ex.getMessage(),
                 request
         );
