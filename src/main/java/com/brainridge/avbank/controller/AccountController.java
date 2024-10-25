@@ -1,5 +1,6 @@
 package com.brainridge.avbank.controller;
 
+import com.brainridge.avbank.constants.ApiUrlConstants;
 import com.brainridge.avbank.dto.CreateAccountRequestDTO;
 import com.brainridge.avbank.dto.CreateAccountResponseDTO;
 import com.brainridge.avbank.exception.AccountNotFoundException;
@@ -12,7 +13,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/accounts")
+@RequestMapping(ApiUrlConstants.BASE_URL + "/accounts")
 @Validated
 @RequiredArgsConstructor
 public class AccountController {

@@ -1,8 +1,6 @@
-package com.brainridge.avbank.config;
+package com.brainridge.avbank.exception;
 
 import com.brainridge.avbank.constants.ExceptionConstants;
-import com.brainridge.avbank.exception.AccountExistsException;
-import com.brainridge.avbank.exception.AccountNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
