@@ -1,7 +1,5 @@
 
-# Banking Application
-
-This is a Java-based banking application built using Spring Boot. It provides functionality for managing bank accounts and processing transactions between accounts, along with error handling for various scenarios.
+# Banking Assigment
 
 ## Table of Contents
 - [Prerequistes](#prerequisites)
