@@ -72,7 +72,6 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public List<TransactionListResponseDTO> getTransactionsByAccountId(Long accountId) {
-        // throw error if no such account exists
         accountRepository.findById(accountId)
                 .orElseThrow(() -> new AccountNotFoundException(accountId));
 
