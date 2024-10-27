@@ -16,7 +16,7 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/iamber12/banking-assignment.git
+   git clone https://github.com/iamber12/banking-transactions-api-assignment.git
    cd banking-assignment
    ```
 
