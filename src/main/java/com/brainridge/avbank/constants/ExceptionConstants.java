@@ -8,4 +8,6 @@ public class ExceptionConstants {
     public static final String ERROR_INVALID_REQUEST_JSON = "Invalid JSON format in request.";
     public static final String ERROR_TRANSACTION_FAILED = "Transaction failed.";
     public static final String UNEXPECTED_ERROR = "Unexpected error.";
+    public static final String ERROR_ENDPOINT_NOT_FOUND = "Endpoint not found.";
+    public static String ERROR_METHOD_NOT_SUPPORTED = "Request method not supported";
 }

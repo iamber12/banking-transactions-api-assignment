@@ -8,7 +8,7 @@ import com.brainridge.avbank.entity.Transaction;
 import com.brainridge.avbank.entity.TransactionStatus;
 import com.brainridge.avbank.entity.TransactionType;
 import com.brainridge.avbank.exception.AccountNotFoundException;
-import com.brainridge.avbank.exception.InsufficientSenderBalanceException;
+import com.brainridge.avbank.exception.InsufficientPayerBalanceException;
 import com.brainridge.avbank.exception.SelfTransactionNotAllowedException;
 import com.brainridge.avbank.repository.AccountRepository;
 import com.brainridge.avbank.repository.TransactionRepository;
@@ -42,7 +42,7 @@ public class TransactionServiceImpl implements TransactionService {
                                 .orElseThrow(() -> new AccountNotFoundException(payerEmail));
 
         if(payerAccount.getBalance().compareTo(transactionAmount)<0) {
-            throw new InsufficientSenderBalanceException(payerEmail, payerAccount.getBalance(), transactionAmount);
+            throw new InsufficientPayerBalanceException(payerEmail, payerAccount.getBalance(), transactionAmount);
         }
 
         Account payeeAccount = accountRepository.findByEmail(payeeEmail)

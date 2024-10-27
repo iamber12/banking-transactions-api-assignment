@@ -1,6 +1,6 @@
 package com.brainridge.avbank.controller;
 
-import com.brainridge.avbank.constants.ApiEnpointsConstants;
+import com.brainridge.avbank.constants.ApiEndpointsConstants;
 import com.brainridge.avbank.dto.CreateTransactionResponseDTO;
 import com.brainridge.avbank.dto.CreateTransactionRequestDTO;
 import com.brainridge.avbank.dto.TransactionListResponseDTO;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(ApiEnpointsConstants.TRANSACTION_BASE_URL)
+@RequestMapping(ApiEndpointsConstants.TRANSACTION_BASE_URL)
 @Validated
 @RequiredArgsConstructor
 public class TransactionController {

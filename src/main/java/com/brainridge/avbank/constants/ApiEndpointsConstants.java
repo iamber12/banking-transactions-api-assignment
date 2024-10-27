@@ -1,6 +1,6 @@
 package com.brainridge.avbank.constants;
 
-public class ApiEnpointsConstants {
+public class ApiEndpointsConstants {
     public static final String BASE_URL = "/v1";
 
     // Account URLs

@@ -15,8 +15,8 @@ public class CreateAccountRequestDTO {
     @NotBlank(message="Owner name is required.")
     private String ownerName;
 
-    @NotNull(message="Initial balance is required.")
-    @DecimalMin(value="0.0", inclusive=false, message="Initial balance must be greater than zero.")
+    @NotNull(message="Balance is required.")
+    @DecimalMin(value="0.0", inclusive=false, message="Balance must be greater than zero.")
     private BigDecimal balance;
 
     @NotBlank(message="Email address must be populated.")
