@@ -1,5 +1,5 @@
 
-# Banking Assigment
+# Banking Transactions API Assignment
 
 ## Table of Contents
 - [Prerequistes](#prerequisites)
@@ -47,7 +47,9 @@
 
 - **Account Endpoints**
   - `POST /accounts` - Create a new account
+     - Fields - ownerName (required), balance (required), email (required)
   - `GET /accounts/{id}` - Get account details by ID
+      - Fields - payerEmail (required), payeeEmail (required), amount(required)
 
 - **Transaction Endpoints**
   - `POST /transactions` - Transfer funds from one account to another
@@ -142,4 +144,7 @@ GET http://localhost:8080/v1/transactions/{accountId}
 ### Assumptions
 
 - Account's owner name, email address and balance (greater than 0) must be provided at the time to creation.
+- Funds will be transferred using email address of the account holders.
+- Transferred amount must be greater than 0.
+- Self-transfer of funds is not allowed.
 
