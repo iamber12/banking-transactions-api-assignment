@@ -10,7 +10,6 @@ import lombok.Getter;
 import java.math.BigDecimal;
 
 @Getter
-@AllArgsConstructor
 public class CreateAccountRequestDTO {
     @NotBlank(message="Owner name is required.")
     private String ownerName;
