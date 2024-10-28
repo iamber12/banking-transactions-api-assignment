@@ -49,10 +49,10 @@
   - `POST /accounts` - Create a new account
      - Fields - ownerName (required), balance (required), email (required)
   - `GET /accounts/{id}` - Get account details by ID
-      - Fields - payerEmail (required), payeeEmail (required), amount(required)
 
 - **Transaction Endpoints**
   - `POST /transactions` - Transfer funds from one account to another
+    - Fields - payerEmail (required), payeeEmail (required), amount(required)
   - `GET /transactions/{accountId}` - Retrieve Transaction history of an account by ID
 
 ### Sample Requests
