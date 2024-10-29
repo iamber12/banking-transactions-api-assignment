@@ -28,6 +28,7 @@ public class TransactionServiceImpl implements TransactionService {
     private final AccountRepository accountRepository;
     private final TransactionRepository transactionRepository;
 
+    @Override
     @Transactional
     public CreateTransactionResponseDTO createTransactionAndTransferFunds(CreateTransactionRequestDTO createTransactionRequestDTO) {
         String payerEmail = createTransactionRequestDTO.getPayerEmail();
@@ -46,7 +47,7 @@ public class TransactionServiceImpl implements TransactionService {
         }
 
         Account payeeAccount = accountRepository.findByEmail(payeeEmail)
-                .orElseThrow(() -> new AccountNotFoundException(payerEmail));
+                .orElseThrow(() -> new AccountNotFoundException(payeeEmail));
 
         payerAccount.setBalance(payerAccount.getBalance().subtract(transactionAmount));
         payeeAccount.setBalance(payeeAccount.getBalance().add(transactionAmount));
